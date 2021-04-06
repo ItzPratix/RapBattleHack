@@ -1,0 +1,221 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local RapBattle = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local DJBooth = Instance.new("TextButton")
+local Decor = Instance.new("Folder")
+local Teleport = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local Teleport_2 = Instance.new("TextLabel")
+local Border = Instance.new("Frame")
+local Border_2 = Instance.new("Frame")
+local Floor = Instance.new("TextButton")
+local Toilet = Instance.new("TextButton")
+local Scene = Instance.new("TextButton")
+local Rapper1 = Instance.new("TextButton")
+local Rapper2 = Instance.new("TextButton")
+
+--Properties:
+
+RapBattle.Name = "RapBattle"
+RapBattle.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RapBattle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+RapBattle.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RapBattle.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = RapBattle
+MainFrame.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 5
+MainFrame.Position = UDim2.new(0.375533402, 0, 0.24345848, 0)
+MainFrame.Size = UDim2.new(0, 350, 0, 450)
+MainFrame.Active = true
+MainFrame.Selectable = true
+MainFrame.Draggable = true
+
+
+Decor.Name = "Decor"
+Decor.Parent = MainFrame
+
+Teleport.Name = "Teleport"
+Teleport.Parent = Decor
+Teleport.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.BackgroundTransparency = 1.000
+Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.BorderSizePixel = 0
+Teleport.Position = UDim2.new(0, 0, 0.660000026, 0)
+Teleport.Size = UDim2.new(0, 350, 0, 30)
+Teleport.Font = Enum.Font.GothamSemibold
+Teleport.Text = "Spam Vote"
+Teleport.TextColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.TextScaled = true
+Teleport.TextSize = 14.000
+Teleport.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Decor
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0285714269, 0, 0.0222222209, 0)
+Title.Size = UDim2.new(0, 330, 0, 60)
+Title.Font = Enum.Font.GothamSemibold
+Title.Text = "Rap Battle Gui"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Teleport_2.Name = "Teleport"
+Teleport_2.Parent = Decor
+Teleport_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Teleport_2.BackgroundTransparency = 1.000
+Teleport_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleport_2.BorderSizePixel = 0
+Teleport_2.Position = UDim2.new(0, 0, 0.208888888, 0)
+Teleport_2.Size = UDim2.new(0, 350, 0, 30)
+Teleport_2.Font = Enum.Font.GothamSemibold
+Teleport_2.Text = "Teleport"
+Teleport_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Teleport_2.TextScaled = true
+Teleport_2.TextSize = 14.000
+Teleport_2.TextWrapped = true
+
+Border.Name = "Border"
+Border.Parent = Decor
+Border.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Border.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Border.BorderSizePixel = 3
+Border.Position = UDim2.new(-0.00160947442, 0, 0.181243822, 0)
+Border.Size = UDim2.new(0, 350, 0, 0)
+
+Border_2.Name = "Border"
+Border_2.Parent = Decor
+Border_2.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Border_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Border_2.BorderSizePixel = 3
+Border_2.Position = UDim2.new(-0.00160947442, 0, 0.632112265, 0)
+Border_2.Size = UDim2.new(0, 350, 0, 0)
+
+--	Teleport guis --
+
+DJBooth.Name = "DJBooth"
+DJBooth.Parent = MainFrame
+DJBooth.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+DJBooth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DJBooth.BorderSizePixel = 3
+DJBooth.Position = UDim2.new(0.0714285746, 0, 0.300000012, 0)
+DJBooth.Size = UDim2.new(0, 135, 0, 50)
+DJBooth.Font = Enum.Font.GothamSemibold
+DJBooth.Text = "DJ Booth"
+DJBooth.TextColor3 = Color3.fromRGB(0, 0, 0)
+DJBooth.TextScaled = true
+DJBooth.TextSize = 14.000
+DJBooth.TextWrapped = true
+DJBooth.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-90, 65, -214)
+end)
+
+Floor.Name = "Floor"
+Floor.Parent = MainFrame
+Floor.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Floor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Floor.BorderSizePixel = 3
+Floor.Position = UDim2.new(0.54285717, 0, 0.300000012, 0)
+Floor.Size = UDim2.new(0, 135, 0, 50)
+Floor.Font = Enum.Font.GothamSemibold
+Floor.Text = "Floor"
+Floor.TextColor3 = Color3.fromRGB(0, 0, 0)
+Floor.TextScaled = true
+Floor.TextSize = 14.000
+Floor.TextWrapped = true
+Floor.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60, 62, -214)
+end)
+
+Toilet.Name = "Toilet"
+Toilet.Parent = MainFrame
+Toilet.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Toilet.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toilet.BorderSizePixel = 3
+Toilet.Position = UDim2.new(0.54285717, 0, 0.464444458, 0)
+Toilet.Size = UDim2.new(0, 135, 0, 50)
+Toilet.Font = Enum.Font.GothamSemibold
+Toilet.Text = "Bathroom"
+Toilet.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toilet.TextScaled = true
+Toilet.TextSize = 14.000
+Toilet.TextWrapped = true
+Toilet.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-60, 62, -278)
+end)
+
+Scene.Name = "Scene"
+Scene.Parent = MainFrame
+Scene.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Scene.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scene.BorderSizePixel = 3
+Scene.Position = UDim2.new(0.071428597, 0, 0.464444458, 0)
+Scene.Size = UDim2.new(0, 135, 0, 50)
+Scene.Font = Enum.Font.GothamSemibold
+Scene.Text = "Stage"
+Scene.TextColor3 = Color3.fromRGB(0, 0, 0)
+Scene.TextScaled = true
+Scene.TextSize = 14.000
+Scene.TextWrapped = true
+Scene.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-77, 65, -214)
+end)
+
+-- Rappers --
+
+Rapper1.Name = "Rapper1"
+Rapper1.Parent = MainFrame
+Rapper1.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Rapper1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rapper1.BorderSizePixel = 3
+Rapper1.Position = UDim2.new(0.0714285746, 0, 0.755555511, 0)
+Rapper1.Size = UDim2.new(0, 300, 0, 40)
+Rapper1.Font = Enum.Font.GothamSemibold
+Rapper1.Text = " "
+Rapper1.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rapper1.TextScaled = true
+Rapper1.TextSize = 14.000
+Rapper1.TextWrapped = true
+Rapper1.MouseButton1Down:connect(function()
+	for i = 0,1 do
+		game.Workspace.Votes:FireServer(false,"p1")
+		game:GetService("RunService").Heartbeat:Wait()
+	end
+end)
+
+Rapper2.Name = "Rapper2"
+Rapper2.Parent = MainFrame
+Rapper2.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+Rapper2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rapper2.BorderSizePixel = 3
+Rapper2.Position = UDim2.new(0.0714285746, 0, 0.879999936, 0)
+Rapper2.Size = UDim2.new(0, 300, 0, 40)
+Rapper2.Font = Enum.Font.GothamSemibold
+Rapper2.Text = " "
+Rapper2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rapper2.TextScaled = true
+Rapper2.TextSize = 14.000
+Rapper2.TextWrapped = true
+Rapper2.MouseButton1Down:connect(function()
+	for i = 0,1 do
+		game.Workspace.Votes:FireServer(false,"p2")
+		game:GetService("RunService").Heartbeat:Wait()
+	end
+end)
+
+while true do
+	Rapper2.Text = game.Workspace.RapBattles.Rappers.player2.Value
+	Rapper1.Text = game.Workspace.RapBattles.Rappers.player1.Value
+	wait(0.1)
+end
